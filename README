@@ -1,0 +1,36 @@
+To run the code you can do either of the following:
+
+1. Run using a console and command line
+2. Run in an IDE
+
+We will outline both:
+
+1. Run Using Command Line
+
+Open a terminal and run the following command:
+
+python eigenfaces.py
+
+With the following flags:
+
+--input
+    Path to input directory of images used for training. Default is "photos"
+--face
+    Path to face detector file. Default is "face_detector"
+--confidence
+    Minimum confidence probability to detect faces. Default is 0.5
+--num-components
+    Number of principal components in the PCA. Default is 150
+--visualize
+    Whether to visualize (1) the eigenfaces and mean face or not (-1). Default is -1
+
+This file will train a model using the MUCT dataset and will select one test sample and determine the confidence level
+of the prediction. The sample comes from the MUCT dataset so it may be a face that the model has seen before.
+
+2. Run Using IDE
+
+Open the file research_test.py in your preferred IDE. You can set all the parameters for the analysis in the "args" block
+including the sample image that you want to test the model against for predictive power. This file will train a model using
+the MUCT dataset, however you will choose which test sample you want by setting the "test_photo" value in the args block.
+We will use this file to predict the closest match to the test photo and provide the confidence level to determine if there
+are any biases in the model training for specific races and genders.
