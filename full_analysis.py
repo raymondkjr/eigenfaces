@@ -7,6 +7,7 @@ from faces import load_face_dataset, load_one_face
 import numpy as np
 import cv2
 import json
+import os
 
 # set all the arguments for running the analysis
 args = {
@@ -14,7 +15,7 @@ args = {
     "confidence": 0.75,
     "num_components": 150,
     "num_iters": 50,
-    "test_photo": ["ray.jpg", "myesha.jpg", "nathan.jpg", "matthew_perry.jpg", "lance_reddick.jpg", "mel_gibson.jpg"]
+    "test_photo": os.listdir("new photos")[1:]
 }
 
 if args["input"] == "MUCT":
