@@ -16,7 +16,7 @@ args = {
     "confidence": 0.75,
     "num_components": 150,
     "num_iters": 50,
-    "test_photo": os.listdir("new photos")[1:]
+    "test_photo": [f for f in os.listdir("new photos") if f != ".DS_Store"]
 }
 
 if args["input"] == "MUCT":

@@ -1,3 +1,4 @@
-import os
+from faces import *
+import cv2
 
-print(os.listdir("new photos")[1:])
+print([f for f in os.listdir("new photos") if f != ".DS_Store"])
